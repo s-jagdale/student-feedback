@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Share your feedback with us.">
+  <title>Student Feedback | Share Your Thoughts</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <div class="eyebrow">STUDENT VOICE</div>
+      <h1>Your feedback<br><span>makes a difference.</span></h1>
+      <p>Tell us what is working well and what we can improve. Your thoughts help us create a better learning experience.</p>
+      <div class="note"><span class="note-icon">✦</span><span>Every suggestion matters. Thank you for taking a moment to share yours.</span></div>
+    </section>
+
+    <section class="form-card" aria-labelledby="form-title">
+      <div class="card-heading">
+        <div>
+          <div class="eyebrow">FEEDBACK FORM</div>
+          <h2 id="form-title">Share your thoughts</h2>
+          <p>All fields are required.</p>
+        </div>
+        <div class="sparkle" aria-hidden="true">✳</div>
+      </div>
+
+      <form id="feedbackForm" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="e.g. Aditi Sharma" maxlength="50" autocomplete="name" required>
+          <small class="error" id="nameError"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" maxlength="254" autocomplete="email" required>
+          <small class="error" id="emailError"></small>
+        </div>
+        <div class="field">
+          <label for="category">Feedback category</label>
+          <select id="category" name="category" required>
+            <option value="">Choose a category</option>
+            <option>Website</option>
+            <option>Course</option>
+            <option>Support</option>
+            <option>Other</option>
+          </select>
+          <small class="error" id="categoryError"></small>
+        </div>
+        <div class="field">
+          <div class="label-row"><label for="message">Your feedback</label><span id="counter">0 / 1000</span></div>
+          <textarea id="message" name="message" rows="4" minlength="10" maxlength="1000" placeholder="Write at least 10 characters..." required></textarea>
+          <small class="hint">Please write between 10 and 1000 characters.</small>
+          <small class="error" id="messageError"></small>
+        </div>
+        <button id="submitButton" type="submit"><span>Submit feedback</span><span aria-hidden="true">↗</span></button>
+        <div id="result" class="result" role="status" aria-live="polite"></div>
+        <p class="privacy">Your information is used only to demonstrate form validation and submission.</p>
+      </form>
+    </section>
+    <footer>BUILT WITH EXPRESSJS <span>•</span> SERVER-SIDE VALIDATION</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
